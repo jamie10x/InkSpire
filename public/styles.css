@@ -1,0 +1,134 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-left .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.write-btn, .signup-btn, .login-btn {
+    color: #000;
+    border: 1px solid #000;
+    background-color: transparent;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.write-btn:hover, .signup-btn:hover, .login-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#blogList {
+    list-style: none;
+    padding: 0;
+}
+
+#blogList li {
+    margin-bottom: 40px;
+}
+
+#blogList a {
+    text-decoration: none;
+    color: #1a0dab;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#blogList p {
+    color: #333;
+}
+
+footer {
+    background-color: #fff;
+    border-top: 1px solid #e1e1e1;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 40px;
+}
