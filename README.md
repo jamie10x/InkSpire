@@ -33,6 +33,18 @@ JWT_SECRET=your_jwt_secret
 	4.	Start the application:
  npm start
 
+ <img width="960" alt="Screenshot 2024-06-25 at 5 07 37 AM" src="https://github.com/Jamie10X/InkSpire/assets/146560655/89708009-117b-4fb5-b05d-c5c83f79356e">
+
+ <img width="960" alt="Screenshot 2024-06-25 at 5 07 42 AM" src="https://github.com/Jamie10X/InkSpire/assets/146560655/3e67f5bd-fec1-4b2b-995e-484cd6f67781">
+
+ ![Screenshot 2024-06-25 at 5 09 43 AM](https://github.com/Jamie10X/InkSpire/assets/146560655/6389119b-7baa-4cab-abbf-fe3c2bf48c1d)
+
+ ![Screenshot 2024-06-25 at 5 09 51 AM](https://github.com/Jamie10X/InkSpire/assets/146560655/f24f198f-0c00-48f9-bdea-b2d4fdf79c9c)
+
+ ![Screenshot 2024-06-25 at 5 10 00 AM](https://github.com/Jamie10X/InkSpire/assets/146560655/095c0d28-d100-4e66-9db2-1c38c0f4e027)
+
+
+
 
 Contributing
 
