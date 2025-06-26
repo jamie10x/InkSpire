@@ -9,9 +9,14 @@
             <% blogs.forEach(blog => { %>
                 <li>
                     <span><%= blog.title %></span>
-                    <div>
-                        <a href="/blogs/<%= blog._id %>">Read</a>
-                        <!-- We will add Edit/Delete links here in a future step -->
+                    <div class="article-actions">
+                        <a href="/blogs/<%= blog._id %>" class="action-link">Read</a>
+                        <a href="/blogs/<%= blog._id %>/edit" class="action-link">Edit</a>
+
+                        <!-- Delete action is a form for security -->
+                        <form action="/blogs/<%= blog._id %>/delete" method="POST" onsubmit="return confirm('Are you sure you want to delete this post?');">
+                            <button type="submit" class="action-button-delete">Delete</button>
+                        </form>
                     </div>
                 </li>
             <% }); %>

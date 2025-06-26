@@ -1,0 +1,23 @@
+<%- include('partials/header', { title: 'Edit Post', user: user }) %>
+
+<main>
+    <div class="form-container">
+        <h1>Edit: <%= blog.title %></h1>
+        <!-- The form action points to the specific update route for this blog -->
+        <form id="blogEditForm" action="/blogs/<%= blog._id %>/update" method="POST">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" value="<%= blog.title %>" required>
+
+            <label for="content">Content:</label>
+            <!-- Note: we use a textarea tag for the content -->
+            <textarea id="content" name="content" required><%= blog.content %></textarea>
+
+            <label for="tags">Tags (comma separated):</label>
+            <input type="text" id="tags" name="tags" value="<%= blog.tags.join(', ') %>">
+
+            <button type="submit">Update Post</button>
+        </form>
+    </div>
+</main>
+
+<%- include('partials/footer') %>

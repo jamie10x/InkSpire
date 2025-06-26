@@ -145,7 +145,7 @@ nav {
     font-size: 16px;
     outline: none;
     transition: border-color 0.3s;
-    width: auto; /* Fix width issue */
+    width: auto;
 }
 
 .form-container input[type="text"]:focus,
@@ -284,4 +284,70 @@ footer {
     color: #666;
     margin-top: 40px;
     width: 100%;
+}
+
+
+/* My Articles page action styles */
+.my-articles-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between items */
+}
+
+.action-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.action-link:hover {
+    text-decoration: underline;
+}
+
+.action-button-delete {
+    background: none;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s ease-in-out;
+}
+
+.action-button-delete:hover {
+    background: #dc3545;
+    color: #fff;
+}
+
+/* Flash Messages */
+.flash-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    top: 80px; /* Below the header */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    min-width: 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.flash-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.flash-error {
+    background-color: #dc3545;
+    border-color: #dc3545;
 }
