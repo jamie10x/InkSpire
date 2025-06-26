@@ -1,163 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Editor | Blog Platform</title>
-    <link rel="stylesheet" href="/styles.css">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #fafafa;
-            color: #333;
-        }
+<%- include('partials/header', { title: 'Blog Editor', user: user }) %>
 
-        header {
-            background-color: #fff;
-            border-bottom: 1px solid #e1e1e1;
-            padding: 10px 0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .nav-left .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #000;
-            text-decoration: none;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .write-btn, .signup-btn, .login-btn {
-            color: #000;
-            border: 1px solid #000;
-            background-color: transparent;
-            padding: 8px 16px;
-            text-decoration: none;
-            border-radius: 20px;
-            margin-left: 10px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .write-btn:hover, .signup-btn:hover, .login-btn:hover {
-            background-color: #000;
-            color: #fff;
-        }
-
-        main {
-            max-width: 800px;
-            width: 100%;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin: 40px auto;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            margin-bottom: 8px;
-            color: #555;
-            font-weight: bold;
-        }
-
-        input[type="text"], textarea {
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            margin-bottom: 20px;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        input[type="text"]:focus, textarea:focus {
-            border-color: #007bff;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 200px;
-        }
-
-        button {
-            padding: 12px;
-            background-color: #007bff;
-            border: none;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f1f1f1;
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="nav-left">
-                <a href="/dashboard" class="logo">InkSpire</a>
-            </div>
-            <div class="nav-right">
-                <a href="/dashboard" class="write-btn">Cancel</a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <h1>Create a New Blog</h1>
+<main>
+    <div class="form-container">
+        <h1>Create a New Blog Post</h1>
         <form id="blogForm" action="/blogs" method="POST">
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" required>
+
             <label for="content">Content:</label>
             <textarea id="content" name="content" required></textarea>
-            <label for="tags">Tags:</label>
-            <input type="text" id="tags" name="tags" placeholder="Comma separated tags">
+
+            <label for="tags">Tags (comma separated):</label>
+            <input type="text" id="tags" name="tags">
+
             <button type="submit">Publish</button>
         </form>
-    </main>
+    </div>
+</main>
 
-    <footer>
-        <p>&copy; 2024 InkSpire</p>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</body>
-</html>
+<%- include('partials/footer') %>

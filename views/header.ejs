@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title is now dynamic, passed from the route -->
+    <title><%= locals.title || 'InkSpire' %></title>
+    <!-- A single link to our one stylesheet -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-left">
+            <!-- All users should be able to go to the main page -->
+            <a href="/" class="logo">InkSpire</a>
+        </div>
+        <div class="nav-right">
+            <% if (locals.user) { %>
+                <!-- Logged-in User Navigation -->
+                <a href="/blogs" class="write-btn">Write Blog</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Profile</button>
+                    <div class="dropdown-content">
+                        <a href="/dashboard">Dashboard</a>
+                        <a href="/auth/my-articles">My Articles</a>
+                        <a href="/auth/logout">Logout</a>
+                    </div>
+                </div>
+            <% } else { %>
+                <!-- Logged-out (Public) Navigation -->
+                <a href="/auth/register" class="signup-btn">Sign Up</a>
+                <a href="/auth/login" class="login-btn">Login</a>
+            <% } %>
+        </div>
+    </nav>
+</header>
